@@ -1,27 +1,24 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import H2 from 'components/H2';
 
-import A from './A';
-import Img from './Img';
 import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
-import Banner from './banner.jpg';
-import messages from './messages';
+
 
 /* eslint-disable react/prefer-stateless-function */
 class Header extends React.Component {
   render() {
     return (
       <div>
-        <A href="https://twitter.com/mxstbr">
-          <Img src={Banner} alt="react-boilerplate - Logo" />
-        </A>
         <NavBar>
           <HeaderLink to="/">
-            <FormattedMessage {...messages.home} />
+          <H2>Home</H2>
           </HeaderLink>
           <HeaderLink to="/features">
-            <FormattedMessage {...messages.features} />
+          <H2>Features</H2>
+          </HeaderLink>
+          <HeaderLink to="/old">
+          <H2>Old</H2>
           </HeaderLink>
         </NavBar>
       </div>
