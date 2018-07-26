@@ -34,15 +34,6 @@ code necessary to start writing your app!
 > again. This is for your own safety, so you can't delete portions of your project
 > irreversibly by accident.
 
-## Generators
-
-```Shell
-npm run generate
-```
-
-Allows you to auto-generate boilerplate code for common parts of your
-application, specifically `component`s, and `container`s. You can
-also run `npm run generate <part>` to skip the first selection. (e.g. `npm run generate container`)
 
 ## Server
 

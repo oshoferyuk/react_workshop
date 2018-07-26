@@ -8,7 +8,6 @@
 - [Stylesheet](#stylesheet)
 - [CSS Modules](#css-modules)
 - [Sass](#sass)
-- [LESS](#less)
 
 ## Next Generation CSS
 
@@ -25,13 +24,6 @@ Watch this video for a comparison and to see how it enforces best practices!
 ### Linting
 
 To complement `styled-components`, this boilerplate also has a CSS linting setup. It uses `stylelint` which will help you stay consistent with modern CSS standards. Read about it [here](linting.md).
-
-### sanitize.css
-
-In addition, this boilerplate also uses
-[`sanitize.css`](https://github.com/jonathantneal/sanitize.css)
-to make browsers render all elements more consistently and in line with modern standards,
-it's a modern alternative to CSS resets. More info available on the [`sanitize.css` page](sanitize.md).
 
 ## CSS Support
 
@@ -225,63 +217,3 @@ class Button extends React.Component {
 
 > For more information about Sass and the `sass-loader` see https://github.com/webpack-contrib/sass-loader
 
-## LESS
-
-### Setup
-
-Install `less-loader` and the `less` dependancy.
-
-```
-npm i -D less-loader less
-```
-
-Modify [`webpack.base.babel.js`][webpackconfig]
-to look like:
-
-```diff
-{
-- test: /\.css$/,
-+ test: /\.less$/,
-  exclude: /node_modules/,
-- use: ['style-loader', 'css-loader'],
-+ use: [
-+ 'style-loader',
-+ {
-+   loader: 'css-loader',
-+   options: {
-+     importLoaders: 1,
-+   },
-+ },
-+ 'less-loader',
-+],
-}
-```
-
-### Usage
-
-**`Button.less`**
-
-```less
-@error-color: red;
-
-.danger {
-  background-color: @error-color;
-}
-```
-
-**`Button.js`**
-
-```js
-import React from "react";
-import "./Button.less";
-
-class Button extends React.Component {
-  render() {
-    return <button className="danger">Click me</button>;
-  }
-}
-```
-
-> For more information about LESS and the `less-loader` see https://github.com/webpack-contrib/less-loader.
-
-[webpackconfig]: ../../internals/webpack/webpack.base.babel.js "Webpack config"

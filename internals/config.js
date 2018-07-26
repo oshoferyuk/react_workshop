@@ -26,8 +26,7 @@ const ReactBoilerplate = {
         'cross-env',
         'express',
         'ip',
-        'minimist',
-        'sanitize.css',
+        'minimist',        
       ],
 
       /**

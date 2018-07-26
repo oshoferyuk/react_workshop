@@ -77,7 +77,6 @@ We may include SSR in a future version, but for now this is our focus... create-
 - Add Stateless Functions to Container generator (@outdooricon)
 - Change development sourcemap style (@samit4me)
 - Create new documentation for dependency updates (@gihrig)
-- Downgrade `sanitize.css` (@Dattaya)
 - Enable rule `react/no-array-index-key` (@carloscuatin)
 - Fix `Intl` polyfill in language generator (@tmf)
 - Handle 204 and 205 HTTP response (@williamdclt)

@@ -65,8 +65,7 @@ exclude: [
   'cross-env',
   'express',
   'ip',
-  'minimist',
-  'sanitize.css',
+  'minimist',  
   'your-unwanted-package', <- add your-unwanted-package
   ...
 ]
