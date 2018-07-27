@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { compose } from 'redux';
-import H2 from 'components/H2';
-import Section from './Section';
+import { Estate } from './Estate';
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.Component {
@@ -16,9 +15,7 @@ export class HomePage extends React.Component {
           />
         </Helmet>
         <div>
-          <Section>
-            <H2>First page</H2>
-          </Section>
+          <Estate></Estate>
         </div>
       </article>
     );

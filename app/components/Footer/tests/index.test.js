@@ -16,21 +16,5 @@ describe('<Footer />', () => {
         </section>,
       ),
     ).toBe(true);
-  });
-
-  it('should render the credits', () => {
-    const renderedComponent = shallow(<Footer />);
-    expect(
-      renderedComponent.contains(
-        <section>
-          <FormattedMessage
-            {...messages.authorMessage}
-            values={{
-              author: <A href="https://twitter.com/mxstbr">Max Stoiber</A>,
-            }}
-          />
-        </section>,
-      ),
-    ).toBe(true);
-  });
+  });  
 });
