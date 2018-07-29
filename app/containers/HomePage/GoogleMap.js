@@ -1,9 +1,8 @@
 import React from 'react';
 import { compose } from 'redux';
-import EstateWrapper from './EstateWrapper';
-import data from '../../data/Data';
-import HouseCard from './HouseCard';
+import GoogleMapWrapper from './GoogleMapWrapper';
 
+let google;
 
 export class GoogleMap extends React.PureComponent {
 
@@ -15,22 +14,21 @@ export class GoogleMap extends React.PureComponent {
   
   
     componentDidMount(){
-        //this.map = new google.maps.Map(this.mapRef,{
-          //  center: {lat: -34.397, lng: 150.644},
-            //zoom: 8
-        //})
+        const map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8,
+          });
     
     
-        //console.dir(this.map);
+        console.dir(map);
     }
 
     render(){
         
     return (
-        <div>
-            
-        <div id="map" ref={this.mapRef}></div>
-        </div>
+        <GoogleMapWrapper>
+            <div id="map" ref={this.mapRef} style={{width:'100%',height:'400px'}}></div>
+        </GoogleMapWrapper>                
     )    
   }
 
