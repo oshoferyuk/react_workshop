@@ -17,7 +17,11 @@ const HouseCard = ({property : house}) => (
 );
 
 HouseCard.propTypes = {
+<<<<<<< Updated upstream
     // property: PropTypes.object.isRequired
+=======
+     property: PropTypes.object,
+>>>>>>> Stashed changes
 }
 
 export default HouseCard;

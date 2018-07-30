@@ -1,8 +1,14 @@
 import React from 'react';
 import { compose } from 'redux';
+
 import GoogleMapWrapper from './GoogleMapWrapper';
 
 let google;
+
+// import GoogleMapWrapper from './GoogleMapWrapper';
+
+// let google;
+
 
 export class GoogleMap extends React.PureComponent {
 
@@ -14,6 +20,7 @@ export class GoogleMap extends React.PureComponent {
   
   
     componentDidMount(){
+
         const map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: -34.397, lng: 150.644},
             zoom: 8,
@@ -30,6 +37,7 @@ export class GoogleMap extends React.PureComponent {
             <div id="map" ref={this.mapRef} style={{width:'100%',height:'400px'}}></div>
         </GoogleMapWrapper>                
     )    
+
   }
 
 }

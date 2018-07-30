@@ -12,7 +12,10 @@ class Header extends React.Component {
       <div>
         <NavBar>
           <HeaderLink to="/">
-          <H2>Home</H2>
+          <H2>Estate</H2>
+          </HeaderLink>
+          <HeaderLink to="/swapi">
+          <H2>SWAPI</H2>
           </HeaderLink>
           <HeaderLink to="/features">
           <H2>Features</H2>
